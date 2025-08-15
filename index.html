@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de Plan Recambio de Market</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Calculadora de Plan Recambio de Market</h1>
+    <form>
+        <label for="marca">Marca:</label>
+        <select id="marca" name="marca">
+            <option value="">Selecciona una marca</option>
+            <option value="Samsung">Samsung</option>
+            <option value="Apple">Apple</option>
+            <option value="Xiaomi">Xiaomi</option>
+            <option value="Motorola">Motorola</option>
+        </select><br><br>
+
+        <label for="modelo">Modelo:</label>
+        <select id="modelo" name="modelo">
+            <option value="">Selecciona un modelo</option>
+        </select>
+        </select><br><br>
+
+        <label for="estado">Estado:</label>
+        <select id="estado" name="estado">
+            <option value="">Selecciona el estado</option>
+            <option value="Nuevo">Nuevo</option>
+            <option value="Usado">Usado</option>
+            <option value="Dañado">Dañado</option>
+        </select><br><br>
+        <button type="button" name="calcular" id="calcular">Calcular</button>
+    </form>
+    <div id="resultado"></div>
+<script src="script.js"></script>
+</body>
+</html>
