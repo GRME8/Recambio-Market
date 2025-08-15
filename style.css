@@ -1,61 +1,87 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
+    font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
     padding: 0;
+    min-height: 100vh;
+    background: url("https://d2yoo3qu6vrk5d.cloudfront.net/images/20190509123141/captura17-891x485.jpg");
+    background-size: cover;
 }
 
 h1 {
     text-align: center;
-    color: #333;
-    margin-top: 30px;
+    color: #0e2251;
+    margin-top: 40px;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+    text-shadow: 0 2px 16px rgba(0,0,0,0.25);
 }
 
 form {
-    background: #fff;
-    max-width: 400px;
+    background: rgba(255,255,255,0.85);
+    max-width: 420px;
     margin: 40px auto;
-    padding: 30px 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 32px 24px;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18), 0 1.5px 6px rgba(0,0,0,0.08);
+    backdrop-filter: blur(4px);
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px);}
+    to { opacity: 1; transform: translateY(0);}
 }
 
 label {
     display: block;
-    margin-bottom: 8px;
-    color: #555;
-    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 600;
+    font-size: 1.05rem;
 }
 
 select {
     width: 100%;
-    padding: 8px;
-    margin-bottom: 18px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 22px;
+    border-radius: 6px;
+    border: 1px solid #bfcad6;
+    font-size: 1rem;
+    background: #f7fafd;
+    transition: border-color 0.2s;
+}
+
+select:focus {
+    border-color: #0078d7;
+    outline: none;
 }
 
 button {
     width: 100%;
-    padding: 10px;
-    background: #0078d7;
+    padding: 12px;
+    background: linear-gradient(90deg, #0078d7 60%, #005fa3 100%);
     color: #fff;
     border: none;
-    border-radius: 4px;
-    font-size: 16px;
+    border-radius: 6px;
+    font-size: 1.1rem;
     cursor: pointer;
     font-weight: bold;
-    transition: background 0.2s;
+    box-shadow: 0 2px 8px rgba(0,120,215,0.08);
+    transition: background 0.2s, box-shadow 0.2s;
 }
 
 button:hover {
-    background: #005fa3;
+    background: linear-gradient(90deg, #005fa3 60%, #0078d7 100%);
+    box-shadow: 0 4px 16px rgba(0,120,215,0.12);
 }
 
 #resultado {
     text-align: center;
-    margin-top: 20px;
-    font-size: 18px;
+    margin-top: 28px;
+    font-size: 1.2rem;
     color: #0078d7;
+    font-weight: 600;
+    min-height: 32px;
+    text-shadow: 0 2px 8px rgba(0,120,215,0.08);
 }
