@@ -146,51 +146,76 @@
     text-decoration: underline;
 }
 
-/*Prueba. Ajustes para pantallas de hasta 768px (tablets y celulares) */
+/*Prueba hamburguesa*/
+
+/* Ocultar botón hamburguesa en desktop */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #0a258c;
+}
+
+/* --- SOLO en pantallas pequeñas --- */
 @media (max-width: 768px) {
-  .menu-main {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 12px 16px;
+  /* Mostrar hamburguesa y ocultar links por defecto */
+  .menu-toggle {
+    display: block;
   }
 
   .menu-links {
+    display: none;
     flex-direction: column;
     width: 100%;
-    gap: 12px;
+    gap: 16px;
     margin-top: 12px;
   }
 
-  .menu-links a {
-    font-size: 1rem;
-    padding: 8px 0;
+  /* Cuando el menú está activo */
+  .menu-links.active {
+    display: flex;
   }
 
   .menu-icons {
     margin-top: 12px;
     gap: 16px;
   }
+}
+/* Botón Hamburguesa */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 10px;
+}
 
-  .menu-top {
-    height: auto;
-    padding: 8px 16px;
-    justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
-  }
+/* Modo móvil */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
 
-  .menu-item-dropdown .dropdown-menu {
-    position: static; /* Evita que quede flotando mal en móvil */
-    min-width: auto;
-    box-shadow: none;
-    border: none;
-    padding: 8px 0;
-    flex-direction: column;
-  }
+    .menu-links {
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* debajo del header */
+        left: 0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        padding: 10px;
+        z-index: 999;
+    }
 
-  .dropdown-column {
-    border-right: none;
-    padding-right: 0;
-    margin-bottom: 16px;
-  }
+    .menu-links.active {
+        display: flex;
+    }
+
+    .menu-links a {
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd;
+    }
 }
