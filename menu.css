@@ -1,0 +1,147 @@
+.menu-superior {
+    width: 100%;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.menu-top {
+    background: #0a258c;
+    color: #fff;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 32px;
+}
+
+.menu-top-right a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 24px;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.menu-main {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 32px;
+    border-bottom: 1px solid #e3eafc;
+}
+
+.menu-logo .logo-market {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0a258c;
+    letter-spacing: 1px;
+}
+
+.menu-links {
+    display: flex;
+    gap: 32px;
+}
+
+.menu-links a {
+    color: #0a258c;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: color 0.2s;
+}
+
+.menu-links a:hover {
+    color: #113b9b;
+    text-decoration: underline;
+}
+
+.menu-icons {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.icon-search {
+    font-size: 1.3rem;
+    color: #0a258c;
+    cursor: pointer;
+}
+
+.icon-cart {
+    font-size: 1.1rem;
+    color: #0a258c;
+    cursor: pointer;
+}
+
+.logo-antel {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0a258c;
+    line-height: 1;
+    text-align: right;
+}
+
+.logo-antel .agente {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #222;
+    letter-spacing: 0.5px;
+}
+
+/* ...existing code... */
+
+.menu-item-dropdown {
+    position: relative;
+}
+
+.menu-item-dropdown .dropdown-menu {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: #fff;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 24px 32px;
+    min-width: 600px;
+    z-index: 100;
+    border-radius: 0 0 8px 8px;
+    border: 1px solid #e3eafc;
+    gap: 32px;
+}
+
+.menu-item-dropdown:hover .dropdown-menu {
+    display: flex; /* Solo visible al hacer hover */
+}
+
+.dropdown-column {
+    display: flex;
+    flex-direction: column;
+    min-width: 160px;
+    border-right: 1px solid #eee;
+    padding-right: 24px;
+}
+
+.dropdown-column:last-child {
+    border-right: none;
+    padding-right: 0;
+}
+
+.dropdown-title {
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #222;
+    font-size: 1.05rem;
+}
+
+.dropdown-menu a {
+    color: #222;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    transition: color 0.2s;
+}
+
+.dropdown-menu a:hover {
+    color: #0a258c;
+    text-decoration: underline;
+}
