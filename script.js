@@ -79,7 +79,7 @@ document.getElementById('calcular').addEventListener('click', function() {
         resultadoDiv.textContent = 'Valor estimado de recambio: $' + baseValue.toFixed(2);
     }
 });
-// Botón hamburguesa para móviles
+/* Botón hamburguesa para móviles
 document.addEventListener("DOMContentLoaded", () => {
     const hamburger = document.getElementById("hamburger");
     const menu = document.querySelector(".menu-links");
@@ -89,4 +89,13 @@ document.addEventListener("DOMContentLoaded", () => {
             menu.classList.toggle("active");
         });
     }
+});
+*/
+// Seleccionamos botón y menú
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
+// Al hacer click en el botón hamburguesa
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
 });
