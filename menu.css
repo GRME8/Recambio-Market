@@ -146,76 +146,77 @@
     text-decoration: underline;
 }
 
-/*Prueba hamburguesa*/
+/* ----- RESET BÁSICO ----- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* Ocultar botón hamburguesa en desktop */
+/* ----- NAVBAR ----- */
+header {
+  background: #333;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Lista de enlaces (por defecto en horizontal) */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00bfff;
+}
+
+/* Botón hamburguesa */
 .menu-toggle {
-  display: none;
-  font-size: 2rem;
+  display: none; /* oculto en PC */
   background: none;
   border: none;
+  font-size: 2rem;
+  color: white;
   cursor: pointer;
-  color: #0a258c;
 }
 
-/* --- SOLO en pantallas pequeñas --- */
+/* ----- RESPONSIVE ----- */
 @media (max-width: 768px) {
-  /* Mostrar hamburguesa y ocultar links por defecto */
   .menu-toggle {
-    display: block;
+    display: block; /* visible en móviles */
   }
 
-  .menu-links {
-    display: none;
+  .nav-links {
+    position: absolute;
+    top: 60px; /* debajo del header */
+    right: 0;
+    width: 200px;
+    background: #444;
     flex-direction: column;
-    width: 100%;
-    gap: 16px;
-    margin-top: 12px;
+    align-items: flex-start;
+    padding: 1rem;
+    display: none; /* oculto por defecto */
   }
 
-  /* Cuando el menú está activo */
-  .menu-links.active {
-    display: flex;
+  .nav-links.show {
+    display: flex; /* se muestra al activar hamburguesa */
   }
-
-  .menu-icons {
-    margin-top: 12px;
-    gap: 16px;
-  }
-}
-/* Botón Hamburguesa */
-.hamburger {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-    padding: 10px;
-}
-
-/* Modo móvil */
-@media (max-width: 768px) {
-    .hamburger {
-        display: block;
-    }
-
-    .menu-links {
-        display: none;
-        flex-direction: column;
-        background-color: #fff;
-        width: 100%;
-        position: absolute;
-        top: 60px; /* debajo del header */
-        left: 0;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        padding: 10px;
-        z-index: 999;
-    }
-
-    .menu-links.active {
-        display: flex;
-    }
-
-    .menu-links a {
-        padding: 10px 0;
-        border-bottom: 1px solid #ddd;
-    }
 }
