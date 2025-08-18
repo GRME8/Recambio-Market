@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', () => {
 /* ========== DATOS CALCULADORA ========== */
     const modelosPorMarca = {
         Samsung: ['Galaxy S21', 'Galaxy S22', 'Galaxy A52', 'Galaxy Note 20', 'Galaxy S20 FE'],
@@ -60,3 +61,4 @@
         }
     }
 });
+
